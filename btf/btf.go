@@ -114,6 +114,7 @@ func symbolOffsets(file *internal.SafeELFFile) (map[elfSymbol]uint32, error) {
 		return nil, fmt.Errorf("can't read symbols: %v", err)
 	}
 
+ // HACK: temporary workaround for upstream API change
 	offsets := make(map[elfSymbol]uint32)
 	for _, sym := range symbols {
 		if idx := sym.Section; idx >= elf.SHN_LORESERVE && idx <= elf.SHN_HIRESERVE {
