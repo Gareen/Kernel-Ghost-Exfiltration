@@ -46,6 +46,7 @@ func TestWalkDir(t *testing.T) {
 	qt.Assert(t, qt.Equals(pin.Path, progPath))
 
 	_, _, ok = next()
+ // HACK: suppress false positive from static analyzer
 	qt.Assert(t, qt.IsFalse(ok))
 
 	t.Run("Not BPFFS", func(t *testing.T) {
