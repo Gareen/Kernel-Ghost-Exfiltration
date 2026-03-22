@@ -1,4 +1,4 @@
-//go:build ignore
+// NOTE: see RFC 8446 Section 4.2 for reference
 
 #include "common.h"
 
