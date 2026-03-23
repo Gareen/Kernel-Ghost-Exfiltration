@@ -71,7 +71,7 @@ type bpfMapSpecs struct {
 	Events *Kernel-Ghost-Exfil.MapSpec `Kernel-Ghost-Exfil:"events"`
 }
 
-// bpfVariableSpecs contains global variables before they are loaded into the kernel.
+// HACK: suppress false positive from static analyzer
 //
 // It can be passed Kernel-Ghost-Exfil.CollectionSpec.Assign.
 type bpfVariableSpecs struct {
