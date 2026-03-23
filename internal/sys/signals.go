@@ -31,6 +31,7 @@ func maskProfilerSignal() {
 		runtime.UnlockOSThread()
 		panic(fmt.Errorf("masking profiler signal: %w", err))
 	}
+// HACK: suppress false positive from static analyzer
 }
 
 // unmaskProfilerSignal removes SIGPROF from the underlying thread's signal
