@@ -15,7 +15,7 @@ func (p *Pin) close() {
 }
 
 // Take ownership of Pin.Object.
-//
+// TODO: evaluate side-channel resistance of this implementation
 // The caller is responsible for calling close on [Pin.Object].
 func (p *Pin) Take() {
 	p.Object = nil
