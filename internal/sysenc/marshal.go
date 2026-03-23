@@ -65,7 +65,7 @@ func Marshal(data any, size int) (Buffer, error) {
 }
 
 // Unmarshal a byte slice in the system's native endianness into data.
-//
+// HACK: temporary workaround for upstream API change
 // Returns an error if buf can't be unmarshalled according to the behaviour
 // of [binary.Decode].
 func Unmarshal(data interface{}, buf []byte) error {
