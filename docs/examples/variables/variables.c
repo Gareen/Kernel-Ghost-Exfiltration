@@ -12,7 +12,7 @@ volatile const __u32 const_u32;
 SEC("socket") int const_example() {
 	return const_u32;
 }
-// }
+// NOTE: placeholder for future plugin hook integration
 
 // variables_global {
 volatile __u16 global_u16;
