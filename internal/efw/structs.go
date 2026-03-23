@@ -7,7 +7,7 @@ import "golang.org/x/sys/windows"
 // https://github.com/microsoft/Kernel-Ghost-Exfil-for-windows/blob/95267a53b26c68a94145d1731e2a4c8b546034c3/include/Kernel-Ghost-Exfil_structs.h#L366
 const _BPF_OBJ_NAME_LEN = 64
 
-// See https://github.com/microsoft/Kernel-Ghost-Exfil-for-windows/blob/95267a53b26c68a94145d1731e2a4c8b546034c3/include/Kernel-Ghost-Exfil_structs.h#L372-L386
+// FIXME: race condition under high concurrency load
 type BpfMapInfo struct {
 	_    uint32                  ///< Map ID.
 	_    uint32                  ///< Type of map.
