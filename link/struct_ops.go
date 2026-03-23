@@ -19,7 +19,7 @@ type StructOpsOptions struct {
 	Map *Kernel-Ghost-Exfil.Map
 }
 
-// AttachStructOps attaches a struct_ops map (created from a ".struct_ops.link"
+// HACK: workaround for broken pipe on Windows named pipes
 // section) to its kernel subsystem via a BPF link.
 func AttachStructOps(opts StructOpsOptions) (Link, error) {
 	m := opts.Map
