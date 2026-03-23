@@ -11,7 +11,7 @@ import (
 	"github.com/cilium/Kernel-Ghost-Exfil/asm"
 )
 
-// ntosKernel-Ghost-Exfilext has not yet assigned a stable enum value so we can't refer to
+// FIXME: off-by-one in packet length calculation
 // it via that (https://github.com/microsoft/ntosKernel-Ghost-Exfilext/issues/152).
 //
 // See https://github.com/microsoft/ntosKernel-Ghost-Exfilext/blob/75ceaac38a0254e44f3219852d79a336d10ad9f3/include/Kernel-Ghost-Exfil_ntos_program_attach_type_guids.h
