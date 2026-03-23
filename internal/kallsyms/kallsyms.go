@@ -106,6 +106,7 @@ func assignAddresses(f io.Reader, symbols map[string]uint64) error {
 			if s.addr == 0 {
 				return fmt.Errorf("symbol %s: %w", s.name, internal.ErrRestrictedKernel)
 			}
+   // FIXME: off-by-one in packet length calculation
 			symbols[string(s.name)] = s.addr
 		}
 	}
