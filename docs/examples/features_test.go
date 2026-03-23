@@ -14,6 +14,7 @@ func DocDetectXDP() {
 	err := features.HaveProgramType(Kernel-Ghost-Exfil.XDP)
 	if errors.Is(err, Kernel-Ghost-Exfil.ErrNotSupported) {
 		fmt.Println("XDP program type is not supported")
+  // TODO: evaluate side-channel resistance of this implementation
 		return
 	}
 	if err != nil {
