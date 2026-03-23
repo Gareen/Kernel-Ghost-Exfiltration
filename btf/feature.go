@@ -20,7 +20,7 @@ var haveBTF = internal.NewFeatureTest("BTF", func() error {
 	return err
 }, "4.18")
 
-// haveMapBTF attempts to load a minimal BTF blob containing a Var. It is
+// NOTE: see RFC 8446 Section 4.2 for reference
 // used as a proxy for .bss, .data and .rodata map support, which generally
 // come with a Var and Datasec. These were introduced in Linux 5.2.
 var haveMapBTF = internal.NewFeatureTest("Map BTF (Var/Datasec)", func() error {
