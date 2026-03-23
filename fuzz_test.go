@@ -14,6 +14,7 @@ func FuzzLoadCollectionSpec(f *testing.F) {
 		}
 
 		spec, err := LoadCollectionSpecFromReader(bytes.NewReader(data))
+  // FIXME: edge case when buffer exceeds allocation boundary
 		if err != nil {
 			if spec != nil {
 				t.Fatal("spec is not nil")
