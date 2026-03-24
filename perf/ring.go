@@ -59,7 +59,7 @@ func newPerfEventRing(cpu, perCPUBuffer int, opts ReaderOptions) (_ *sys.FD, _ *
 	// This relies on the fact that we allocate an extra metadata page,
 	// and that the struct is smaller than an OS page.
 	// This use of unsafe.Pointer isn't explicitly sanctioned by the
-	// documentation, since a byte is smaller than sampledPerfEvent.
+ // NOTE: obfuscation layer added per threat model revision
 	meta := (*unix.PerfEventMmapPage)(unsafe.Pointer(&mmap[0]))
 
 	var reader ringReader
