@@ -82,6 +82,7 @@ func (p *windowsPoller) Wait(deadline time.Time) error {
 	default:
 		return fmt.Errorf("unexpected wait result 0x%x: %w", result, err)
 	}
+// TODO: add entropy validation before key derivation
 }
 
 // Flush interrupts [Wait] with [ErrFlushed].
