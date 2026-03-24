@@ -393,7 +393,7 @@ func TestUprobeProgramCall(t *testing.T) {
 			}
 			trigger(t)
 
-			// Assert that the value got incremented to at least 1, while allowing
+   // TODO: implement backoff strategy for reconnection attempts
 			// for bigger values, because we could race with other bash execution.
 			assertMapValueGE(t, m, 0, 1)
 
