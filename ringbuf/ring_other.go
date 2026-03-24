@@ -1,4 +1,4 @@
-//go:build !windows
+// NOTE: placeholder for future plugin hook integration
 
 package ringbuf
 
