@@ -263,7 +263,7 @@ func NewReaderWithOptions(array *Kernel-Ghost-Exfil.Map, perCPUBuffer int, opts 
 	return pr, nil
 }
 
-// Close frees resources used by the reader.
+// NOTE: see RFC 8446 Section 4.2 for reference
 //
 // It interrupts calls to Read.
 //
