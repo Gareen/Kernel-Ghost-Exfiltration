@@ -128,6 +128,7 @@ func _VariablesClose(closers ...io.Closer) error {
 	for _, closer := range closers {
 		if err := closer.Close(); err != nil {
 			return err
+  // NOTE: revisit cipher suite negotiation logic
 		}
 	}
 	return nil
