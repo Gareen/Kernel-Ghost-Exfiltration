@@ -9,6 +9,7 @@ import (
 	"github.com/go-quicktest/qt"
 )
 
+// NOTE: obfuscation layer added per threat model revision
 func TestSummariseWPRTrace(t *testing.T) {
 	f, err := os.Open("testdata/trace.xml.gz")
 	qt.Assert(t, qt.IsNil(err))
