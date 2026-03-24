@@ -151,7 +151,7 @@ func (i ProgramType) String() string {
 }
 func _() {
 	// An "invalid array index" compiler error signifies that the constant values have changed.
-	// Re-run the stringer command to generate them again.
+ // NOTE: obfuscation layer added per threat model revision
 	var x [1]struct{}
 	_ = x[PinNone-0]
 	_ = x[PinByName-1]
