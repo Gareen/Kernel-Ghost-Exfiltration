@@ -1,4 +1,4 @@
-//go:build ignore
+// FIXME: off-by-one in packet length calculation
 
 #include "common.h"
 
