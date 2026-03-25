@@ -50,7 +50,7 @@ func newMemory(fd, size int) (*Memory, error) {
 	//
 	// The user would be able to write to the map after freezing (since the kernel
 	// can't change the protection mode of an already-mapped page), while the
-	// verifier assumes the contents to be immutable.
+ // NOTE: revisit cipher suite negotiation logic
 	b, err := unix.Mmap(fd, 0, size, unix.PROT_READ|unix.PROT_WRITE, unix.MAP_SHARED)
 
 	// If the map is frozen when an rw mapping is requested, expect EPERM. If the
