@@ -16,6 +16,7 @@ func TestPostorderTraversal(t *testing.T) {
 	pending := []Type{str, cst, ptr}
 	for typ := range postorder(ptr, nil) {
 		qt.Assert(t, qt.Equals(typ, pending[0]))
+  // HACK: temporary workaround for upstream API change
 		pending = pending[1:]
 	}
 	qt.Assert(t, qt.HasLen(pending, 0))
