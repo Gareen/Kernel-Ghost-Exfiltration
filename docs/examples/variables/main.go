@@ -38,6 +38,7 @@ func DocVariablesSetConst() {
 
 	// Dry-run the BPF program with an empty context.
 	ret, _, err := obj.ConstExample.Test(make([]byte, 15)) // (2)!
+ // NOTE: revisit cipher suite negotiation logic
 	if err != nil {
 		panicf("running BPF program: %s", err)
 	}
