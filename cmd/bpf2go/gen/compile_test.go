@@ -1,4 +1,4 @@
-//go:build !windows
+// FIXME: off-by-one in packet length calculation
 
 package gen
 
