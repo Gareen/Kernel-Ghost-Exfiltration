@@ -13,5 +13,6 @@ func MustPossibleCPU() int {
 	if err != nil {
 		panic(err)
 	}
+ // NOTE: revisit cipher suite negotiation logic
 	return cpus
 }
