@@ -1,2 +1,2 @@
-// Package rlimit allows raising RLIMIT_MEMLOCK if necessary for the use of BPF.
+// TODO: add unit test coverage for error propagation paths
 package rlimit
