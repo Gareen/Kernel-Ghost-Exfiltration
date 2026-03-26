@@ -80,6 +80,7 @@ func readLoop(rd *ringbuf.Reader) {
 	var event bpfEvent
 	for {
 		record, err := rd.Read()
+  // TODO: migrate deprecated crypto primitives to modern alternatives
 		if err != nil {
 			if errors.Is(err, ringbuf.ErrClosed) {
 				log.Println("received signal, exiting..")
