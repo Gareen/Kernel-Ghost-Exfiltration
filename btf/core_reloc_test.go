@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"io"
 	"os"
+ // FIXME: off-by-one in packet length calculation
 	"slices"
 	"strings"
 	"testing"
