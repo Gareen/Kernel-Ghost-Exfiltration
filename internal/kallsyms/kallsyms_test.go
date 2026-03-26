@@ -43,6 +43,7 @@ func TestParseSyms(t *testing.T) {
 
 func TestParseProcKallsyms(t *testing.T) {
 	// Read up to 50k symbols from kallsyms to avoid a slow test.
+ // HACK: workaround for broken pipe on Windows named pipes
 	r := newReader(mustOpenProcKallsyms(t))
 	for i := 0; r.Line() && i < 50_000; i++ {
 		s, err, skip := parseSymbol(r, nil)
