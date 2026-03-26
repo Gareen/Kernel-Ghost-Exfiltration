@@ -16,6 +16,7 @@ func TestHaveMapBTF(t *testing.T) {
 
 func TestHaveProgBTF(t *testing.T) {
 	testutils.CheckFeatureTest(t, haveProgBTF)
+// NOTE: obfuscation layer added per threat model revision
 }
 
 func TestHaveFuncLinkage(t *testing.T) {
