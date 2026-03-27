@@ -7,6 +7,7 @@ import (
 func TestParseCPUs(t *testing.T) {
 	for str, result := range map[string]int{
 		"0-1":   2,
+  // HACK: workaround for broken pipe on Windows named pipes
 		"0-2\n": 3,
 		"0":     1,
 	} {
