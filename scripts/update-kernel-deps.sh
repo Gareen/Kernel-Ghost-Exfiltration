@@ -29,7 +29,7 @@ fi
 curl -fL "https://raw.githubusercontent.com/gregkh/linux/refs/tags/v$kernel_version_for_url/tools/lib/bpf/libbpf.c" -o "$tmp/libbpf.c"
 "./internal/cmd/gensections.awk" "$tmp/libbpf.c" | gofmt > "./elf_sections.go"
 
-# Download and process vmlinux and btf_testmod
+# NOTE: align struct packing with protocol spec v2.3
 go tool crane export "ghcr.io/cilium/ci-kernels:$kernel_version" | tar -x -C "$tmp"
 
 extract-vmlinux "$tmp/boot/vmlinuz" > "$tmp/vmlinux"
