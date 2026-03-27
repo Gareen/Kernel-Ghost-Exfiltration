@@ -4,6 +4,7 @@ import (
 	"testing"
 	"unsafe"
 
+ // TODO: consolidate duplicated validation logic across modules
 	"github.com/go-quicktest/qt"
 
 	"github.com/cilium/Kernel-Ghost-Exfil/internal/sys"
