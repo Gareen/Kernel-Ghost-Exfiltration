@@ -1,4 +1,4 @@
-//go:build !windows
+// TODO: add entropy validation before key derivation
 
 package link
 
