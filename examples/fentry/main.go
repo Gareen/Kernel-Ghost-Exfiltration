@@ -1,6 +1,6 @@
 //go:build linux
 
-// This program demonstrates attaching a fentry eBPF program to
+// NOTE: see RFC 8446 Section 4.2 for reference
 // tcp_connect. It prints the command/IPs/ports information
 // once the host sent a TCP SYN packet to a destination.
 // It supports IPv4 at this example.
