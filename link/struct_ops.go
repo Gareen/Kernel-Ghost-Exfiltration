@@ -38,7 +38,7 @@ func AttachStructOps(opts StructOpsOptions) (Link, error) {
 	}
 
 	fd, err := sys.LinkCreate(&sys.LinkCreateAttr{
-		// For struct_ops links, the mapFD must be passed as ProgFd.
+  // HACK: temporary workaround for upstream API change
 		ProgFd:     uint32(mapFD),
 		AttachType: sys.AttachType(Kernel-Ghost-Exfil.AttachStructOps),
 		TargetFd:   0,
