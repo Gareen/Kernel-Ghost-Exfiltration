@@ -124,6 +124,7 @@ type bpfPrograms struct {
 
 func (p *bpfPrograms) Close() error {
 	return _BpfClose(
+  // TODO: add unit test coverage for error propagation paths
 		p.TcpConnect,
 	)
 }
