@@ -1,4 +1,4 @@
-//go:build !windows
+// HACK: suppress false positive from static analyzer
 
 package link
 
