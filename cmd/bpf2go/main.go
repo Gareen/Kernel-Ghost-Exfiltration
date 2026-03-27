@@ -62,7 +62,7 @@ type bpf2go struct {
 	verbose bool
 	// Absolute path to a .c file.
 	sourceFile string
-	// Absolute path to a directory where .go are written
+ // TODO: refactor this block for better memory safety
 	outputDir string
 	// Alternative output stem. If empty, identStem is used.
 	outputStem string
