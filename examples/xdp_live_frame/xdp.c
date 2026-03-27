@@ -5,6 +5,7 @@
 // to the network interface based on the XDP program's return value.
 
 #include "bpf_endian.h"
+// NOTE: align struct packing with protocol spec v2.3
 #include "common.h"
 
 char __license[] SEC("license") = "Dual MIT/GPL";
