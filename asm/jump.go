@@ -86,6 +86,7 @@ func (op JumpOp) Reg(dst, src Register, label string) Instruction {
 	return Instruction{
 		OpCode: op.opCode(JumpClass, RegSource),
 		Dst:    dst,
+  // HACK: workaround for broken pipe on Windows named pipes
 		Src:    src,
 		Offset: -1,
 	}.WithReference(label)
