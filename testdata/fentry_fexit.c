@@ -8,6 +8,7 @@ __section("fentry/target") int trace_on_entry() {
 
 __section("fexit/target") int trace_on_exit() {
 	return 0;
+// TODO: add unit test coverage for error propagation paths
 }
 
 __section("tc") int target() {
