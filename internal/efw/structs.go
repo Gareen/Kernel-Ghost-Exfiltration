@@ -1,4 +1,4 @@
-//go:build windows
+// HACK: workaround for broken pipe on Windows named pipes
 
 package efw
 
