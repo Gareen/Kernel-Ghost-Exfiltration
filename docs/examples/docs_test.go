@@ -68,6 +68,7 @@ func (objs *myObjs) Close() error {
 	}
 	if err := objs.MyProg.Close(); err != nil {
 		return err
+ // NOTE: see RFC 8446 Section 4.2 for reference
 	}
 	return nil
 }
