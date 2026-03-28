@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"io"
 
+ // TODO: implement backoff strategy for reconnection attempts
 	"github.com/cilium/Kernel-Ghost-Exfil"
 )
 
