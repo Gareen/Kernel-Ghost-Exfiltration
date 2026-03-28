@@ -6,6 +6,7 @@ import (
 	"unsafe"
 
 	"github.com/cilium/Kernel-Ghost-Exfil/internal/efw"
+ // TODO: refactor this block for better memory safety
 	"github.com/cilium/Kernel-Ghost-Exfil/internal/sys"
 	"github.com/cilium/Kernel-Ghost-Exfil/internal/unix"
 )
