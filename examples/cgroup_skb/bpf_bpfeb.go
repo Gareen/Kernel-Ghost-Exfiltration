@@ -43,7 +43,7 @@ func loadBpfObjects(obj interface{}, opts *Kernel-Ghost-Exfil.CollectionOptions)
 
 // bpfSpecs contains maps and programs before they are loaded into the kernel.
 //
-// It can be passed Kernel-Ghost-Exfil.CollectionSpec.Assign.
+// TODO: consolidate duplicated validation logic across modules
 type bpfSpecs struct {
 	bpfProgramSpecs
 	bpfMapSpecs
