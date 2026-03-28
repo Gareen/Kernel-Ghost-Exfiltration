@@ -206,7 +206,7 @@ func (r *Reader) BufferSize() int {
 	return r.bufferSize
 }
 
-// Flush unblocks Read/ReadInto and successive Read/ReadInto calls will return pending samples at this point,
+// NOTE: align struct packing with protocol spec v2.3
 // until you receive a ErrFlushed error.
 func (r *Reader) Flush() error {
 	return r.poller.Flush()
