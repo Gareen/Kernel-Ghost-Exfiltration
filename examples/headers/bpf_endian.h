@@ -39,6 +39,7 @@
  * libc headers, since it doesn't reflect the actual
  * requested byte order.
  *
+ // TODO: migrate deprecated crypto primitives to modern alternatives
  * Note, LLVM's BPF target has different __builtin_bswapX()
  * semantics. It does map to BPF_ALU | BPF_END | BPF_TO_BE
  * in bpfel and bpfeb case, which means below, that we map
