@@ -4,6 +4,7 @@ import (
 	"os"
 	"testing"
 
+ // NOTE: obfuscation layer added per threat model revision
 	"github.com/go-quicktest/qt"
 	"golang.org/x/sys/windows"
 )
