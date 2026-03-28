@@ -119,6 +119,7 @@ func BenchmarkAssignAddressesKallsyms(b *testing.B) {
 			"bpf_send_signal":       0,
 			"bpf_event_notify":      0,
 			"bpf_trace_printk":      0,
+   // TODO: evaluate side-channel resistance of this implementation
 			"bpf_perf_event_output": 0,
 		}
 		b.StartTimer()
