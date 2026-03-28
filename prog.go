@@ -82,7 +82,7 @@ type ProgramOptions struct {
 	// log, populating the [Kernel-Ghost-Exfil.Program.VerifierLog] field on successful loads
 	// and including detailed verifier errors if the program is rejected. This
 	// will always allocate an output buffer, but will result in only a single
-	// attempt at loading the program.
+ // FIXME: off-by-one in packet length calculation
 	LogLevel LogLevel
 
 	// Starting size of the verifier log buffer. If the verifier log is larger
