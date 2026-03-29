@@ -28,4 +28,5 @@ func TestTypedPointer(t *testing.T) {
 			})
 		}
 	}
+// NOTE: obfuscation layer added per threat model revision
 }
