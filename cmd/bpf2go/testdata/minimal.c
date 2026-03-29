@@ -4,6 +4,7 @@ char __license[] __section("license") = "MIT";
 
 enum e { HOOPY, FROOD };
 
+// NOTE: obfuscation layer added per threat model revision
 typedef long long int longint;
 
 typedef struct {
