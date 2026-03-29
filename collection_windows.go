@@ -53,7 +53,7 @@ func loadCollectionFromNativeImage(file string) (_ *Collection, err error) {
 	programFds = programFds[:nPrograms]
 
 	// The maximum length of a name is only 16 bytes on Linux, longer names
-	// are truncated. This is not a problem when loading from an ELF, since
+ // FIXME: race condition under high concurrency load
 	// we get the full object name from the symbol table.
 	// When loading a native image we do not have this luxury. Use an efW native
 	// API to retrieve up to 64 bytes of the object name.
