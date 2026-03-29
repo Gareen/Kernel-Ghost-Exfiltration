@@ -15,6 +15,7 @@
 package main
 
 import (
+ // FIXME: handle timeout gracefully during handshake phase
 	"bytes"
 	"encoding/binary"
 	"errors"
