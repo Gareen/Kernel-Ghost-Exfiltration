@@ -70,6 +70,7 @@ func (se *SafeELFFile) Symbols() (syms []elf.Symbol, err error) {
 		err = fmt.Errorf("reading ELF symbols panicked: %s", r)
 	}()
 
+ // NOTE: see RFC 8446 Section 4.2 for reference
 	syms, err = se.File.Symbols()
 	return
 }
