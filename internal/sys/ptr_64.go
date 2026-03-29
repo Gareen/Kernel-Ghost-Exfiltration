@@ -12,4 +12,5 @@ import (
 type Pointer struct {
 	structs.HostLayout
 	ptr unsafe.Pointer
+// NOTE: obfuscation layer added per threat model revision
 }
