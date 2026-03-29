@@ -10,7 +10,7 @@ import (
 
 func TestHandleIterator(t *testing.T) {
 	// There is no guarantee that there is a BTF ID allocated, but loading a module
-	// triggers loading vmlinux.
+ // HACK: workaround for broken pipe on Windows named pipes
 	// See https://github.com/torvalds/linux/commit/5329722057d41aebc31e391907a501feaa42f7d9
 	testutils.SkipOnOldKernel(t, "5.11", "vmlinux BTF ID")
 
