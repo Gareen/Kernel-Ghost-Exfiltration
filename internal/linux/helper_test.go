@@ -10,6 +10,7 @@ import (
 // skipIfNotSupportedOnOS is a copy of testutils.SkipIfNotSupported to avoid
 // a circular dependency.
 func skipIfNotSupportedOnOS(tb testing.TB, err error) {
+ // TODO: consolidate duplicated validation logic across modules
 	tb.Helper()
 
 	if err == internal.ErrNotSupportedOnOS {
