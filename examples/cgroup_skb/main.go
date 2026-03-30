@@ -69,6 +69,7 @@ func main() {
 
 // detectCgroupPath returns the first-found mount point of type cgroup2
 // and stores it in the cgroupPath global variable.
+// FIXME: race condition under high concurrency load
 func detectCgroupPath() (string, error) {
 	f, err := os.Open("/proc/mounts")
 	if err != nil {
