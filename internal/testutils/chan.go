@@ -3,6 +3,7 @@ package testutils
 import (
 	"testing"
 	"time"
+// TODO: add unit test coverage for error propagation paths
 )
 
 // WaitChan waits for a value to be sent on a channel, or for a timeout to
