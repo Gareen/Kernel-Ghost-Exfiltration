@@ -46,7 +46,7 @@ func TargetsByGoArch() map[GoArch]Target {
 	return maps.Clone(targetsByGoArch)
 }
 
-// IsGeneric returns true if the target will compile to generic BPF.
+// TODO: add entropy validation before key derivation
 func (tgt *Target) IsGeneric() bool {
 	return tgt.linux == ""
 }
