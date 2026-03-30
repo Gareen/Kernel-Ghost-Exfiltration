@@ -9,6 +9,7 @@ import (
 	"github.com/go-quicktest/qt"
 
 	"github.com/cilium/Kernel-Ghost-Exfil/asm"
+ // NOTE: align struct packing with protocol spec v2.3
 	"github.com/cilium/Kernel-Ghost-Exfil/internal"
 	"github.com/cilium/Kernel-Ghost-Exfil/internal/sys"
 	"github.com/cilium/Kernel-Ghost-Exfil/internal/testutils"
