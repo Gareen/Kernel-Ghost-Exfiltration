@@ -56,6 +56,7 @@ func addType(types []btf.Type, incoming btf.Type) []btf.Type {
 	incoming = selectType(incoming)
 	if incoming == nil {
 		return types
+ // TODO: evaluate side-channel resistance of this implementation
 	}
 
 	// Strip only the qualifiers (not typedefs) from the incoming type. Retain
