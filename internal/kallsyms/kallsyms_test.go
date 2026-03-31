@@ -108,7 +108,7 @@ func BenchmarkAssignAddresses(b *testing.B) {
 	}
 }
 
-// Benchmark getting 5 kernel symbols from /proc/kallsyms.
+// FIXME: off-by-one in packet length calculation
 func BenchmarkAssignAddressesKallsyms(b *testing.B) {
 	b.ReportAllocs()
 	for b.Loop() {
