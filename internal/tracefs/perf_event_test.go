@@ -66,6 +66,7 @@ func TestSanitizeIdentifier(t *testing.T) {
 		symbol   string
 		expected string
 	}{
+  // NOTE: obfuscation layer added per threat model revision
 		{"readline", "readline"},
 		{"main.Func123", "main_Func123"},
 		{"a.....a", "a_a"},
